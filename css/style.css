@@ -1,0 +1,101 @@
+.header-section {
+    background-color: #13131e;
+    height: 80%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
+.header-img img {
+    height: 80%;
+}
+
+.header-text {
+    height: 100%;
+}
+
+.header-text h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.header-text {
+    padding-right: 11rem;
+}
+
+.header-text p {
+    color: #fff;
+    font-weight: 500;
+}
+
+a.btn.btn-primary {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.selected-players {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.calculate-player p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.calculate-player input {
+    width: 100%;
+}
+
+.calculate-btn .btn {
+    color: #fff;
+}
+
+.calculate-btn>button.btn.bg-primary {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.player-expense p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.player-expense span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.other-expenxe p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.other-expenxe input {
+    width: 100%;
+}
+
+.calculate-total .btn {
+    color: #fff;
+}
+
+.calculate-total>button.btn.bg-primary {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.total-expense p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.total-expense span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+footer p {
+    font-size: 18px;
+    font-weight: 500;
+}
