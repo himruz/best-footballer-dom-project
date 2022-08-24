@@ -35,7 +35,7 @@ document.getElementById('per-player-calculate').addEventListener('click', functi
     const getPerPlayerinput = document.getElementById('per-player')
     const perPlayerString = getPerPlayerinput.value;
     const perPlayerNumber = parseFloat(perPlayerString);
-    const playerExpenxe = perPlayerNumber * playerArray.length;
+    const playerExpenxe = perPlayerNumber * 5;
     const perPlayerExpenxeField = document.getElementById('player-expenxe');
     perPlayerExpenxeField.innerText = playerExpenxe;
 
