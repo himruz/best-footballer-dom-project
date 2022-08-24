@@ -1,17 +1,31 @@
 // select 5 player
 
+const playerArray = [];
+
+function addPlayer(arr) {
+
+    console.log(arr)
+    const selectedPlayerArea = document.getElementById('selected-players-id')
+    selectedPlayerArea.innerHTML = '';
+
+    for (let i = 0; i < arr.length; i++) {
+        const playerName = playerArray[i];
+        const createPlayer = document.createElement('li');
+        createPlayer.innerText = playerName;
+        selectedPlayerArea.appendChild(createPlayer);
+    }
+}
+
 function selectPlayer(element) {
+    element.setAttribute("disabled", true);
+
     const player = element.parentNode.children[0];
     const selectedPlayer = player.innerText;
-
-    const selectedPlayerArea = document.getElementsByClassName('select-players');
-
-    for (eachPlayer = 0; eachPlayer <= selectedPlayerArea.length; eachPlayer++) {
-        const createPlayer = document.createElement('li');
-        createPlayer.innerText = selectedPlayer;
-        const players = createPlayer;
-        selectedPlayerArea[eachPlayer].appendChild(players);
-    }
-
-
+    playerArray.push(selectedPlayer);
+    addPlayer(playerArray)
 }
+
+
+
+
+
