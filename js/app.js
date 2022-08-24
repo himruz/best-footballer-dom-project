@@ -29,6 +29,8 @@ function selectPlayer(element) {
 }
 
 
+
+// calculate per player expenxe
 document.getElementById('per-player-calculate').addEventListener('click', function () {
     const getPerPlayerinput = document.getElementById('per-player')
     const perPlayerString = getPerPlayerinput.value;
@@ -38,6 +40,8 @@ document.getElementById('per-player-calculate').addEventListener('click', functi
     perPlayerExpenxeField.innerText = playerExpenxe;
 
 })
+
+// calculate total expenxe
 
 document.getElementById('calculate-total').addEventListener('click', function () {
     const getManagerinput = document.getElementById('manager')
