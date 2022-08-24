@@ -3,7 +3,10 @@
 const playerArray = [];
 
 function addPlayer(arr) {
-
+    if (document.getElementById('selected-players-id').children.length >= 5) {
+        alert('You have done selected all 5 player')
+        return
+    }
     const selectedPlayerArea = document.getElementById('selected-players-id')
     selectedPlayerArea.innerHTML = '';
 
@@ -13,10 +16,7 @@ function addPlayer(arr) {
         createPlayer.innerText = playerName;
         selectedPlayerArea.appendChild(createPlayer);
     }
-    if (document.getElementById('selected-players-id').children.length > 5) {
-        alert('done')
 
-    }
 }
 
 function selectPlayer(element) {
