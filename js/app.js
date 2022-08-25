@@ -4,8 +4,8 @@ const playerArray = [];
 
 function addPlayer(arr) {
     if (document.getElementById('selected-players-id').children.length >= 5) {
-        alert('You have done selected all 5 player')
-        return
+        alert('You have done selected all 5 player');
+        return;
     }
     const selectedPlayerArea = document.getElementById('selected-players-id')
     selectedPlayerArea.innerHTML = '';
@@ -25,38 +25,45 @@ function selectPlayer(element) {
     const player = element.parentNode.children[0];
     const selectedPlayer = player.innerText;
     playerArray.push(selectedPlayer);
-    addPlayer(playerArray)
+    addPlayer(playerArray);
 }
 
+// get value from text field
+function getTextValue(textId) {
+    const getTextField = document.getElementById(textId);
+    const getTextFieldValue = getTextField.innerText;
+    const getTextFieldNumber = parseFloat(getTextFieldValue);
+    return getTextFieldNumber;
+}
+// get input fields
+function getInputField(elementID) {
+    const getInputField = document.getElementById(elementID);
+    const getInputrString = getInputField.value;
+    const getInputNumber = parseFloat(getInputrString);
+    return getInputNumber;
+}
 
+// set update values to input fields
+function setElement(elementId2, newValue) {
+    const setElementField = document.getElementById(elementId2);
+    setElementField.innerText = newValue;
+}
 
 // calculate per player expenxe
 document.getElementById('per-player-calculate').addEventListener('click', function () {
-    const getPerPlayerinput = document.getElementById('per-player')
-    const perPlayerString = getPerPlayerinput.value;
-    const perPlayerNumber = parseFloat(perPlayerString);
-    const playerExpenxe = perPlayerNumber * 5;
-    const perPlayerExpenxeField = document.getElementById('player-expenxe');
-    perPlayerExpenxeField.innerText = playerExpenxe;
-
+    const perPlayerExpenxeNumber = getInputField("per-player");
+    const playerNumber = document.getElementById('selected-players-id').children.length;
+    const playerExpenxe = perPlayerExpenxeNumber * playerNumber;
+    setElement('player-expenxe', playerExpenxe);
 })
 
 // calculate total expenxe
-
 document.getElementById('calculate-total').addEventListener('click', function () {
-    const getManagerinput = document.getElementById('manager')
-    const getManagerString = getManagerinput.value;
-    const getManagerNumber = parseFloat(getManagerString);
-
-    const getCoachinput = document.getElementById('coach')
-    const getCoachString = getCoachinput.value;
-    const getCoachNumber = parseFloat(getCoachString);
-    const perPlayerExpenxeField = document.getElementById('player-expenxe');
-    const totalPlayerExpenxe = perPlayerExpenxeField.innerText;
-    const totalPlayerExpenxeNumber = parseFloat(totalPlayerExpenxe)
-    const totalExpenxe = getManagerNumber + getCoachNumber + totalPlayerExpenxeNumber;
-    const getTotalExpexeField = document.getElementById('total')
-    getTotalExpexeField.innerText = totalExpenxe;
+    const getManagerNumber = getInputField("manager");
+    const getCoachNumber = getInputField("coach");
+    const playerExpenxeNumber = getTextValue("player-expenxe");
+    const totalExpenxe = getManagerNumber + getCoachNumber + playerExpenxeNumber;
+    setElement('total', totalExpenxe);
 })
 
 
